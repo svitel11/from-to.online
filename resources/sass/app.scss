@@ -1,1 +1,13 @@
-//
+@import '~uikit/dist/css/uikit.min.css';
+
+// 1. Your custom variables and variable overwrites.
+$global-link-color: #DA7D02;
+
+@import '~uikit/src/scss/variables-theme';
+@import '~uikit/src/scss/mixins-theme';
+
+// 3. Your custom mixin overwrites.
+@mixin hook-card() { color: #000; }
+
+// 4. Import UIkit.
+@import "~uikit/src/scss/uikit-theme";
