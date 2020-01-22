@@ -1,13 +1,51 @@
-@import '~uikit/dist/css/uikit.min.css';
+@import '~materialize-css';
 
-// 1. Your custom variables and variable overwrites.
-$global-link-color: #DA7D02;
+@import 'content';
+@import "contentAd";
 
-@import '~uikit/src/scss/variables-theme';
-@import '~uikit/src/scss/mixins-theme';
+body {
+}
 
-// 3. Your custom mixin overwrites.
-@mixin hook-card() { color: #000; }
+.container {
+    box-shadow: 0px 0px 9px;
+    min-height: calc(100vh - 72px - 64px);
+}
 
-// 4. Import UIkit.
-@import "~uikit/src/scss/uikit-theme";
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.header-top {
+    -moz-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    -webkit-transform: rotate(90deg);
+    background: #f5f2ef;
+    padding: 0 10px;
+    top: 150px;
+    left: -64px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .slogan {
+        padding: 0;
+        margin: 0;
+        font-size: 24px;
+        font-family: 'Poiret One', cursive;
+        span {
+            font-family: 'Reenie Beanie', cursive;
+        }
+    }
+}
+
+.ffooter {
+    text-align: center;
+    background: #655556 !important;
+    padding-top: 0 !important;
+    .footer-copyright {
+        justify-content: center !important;
+    }
+}

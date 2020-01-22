@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('datasize.index');
 });
+
+Route::get('/datasize', 'DatasizeController@index')->name('datasize');
+
+Route::get('/bot', 'BotController@index')->name('bot');

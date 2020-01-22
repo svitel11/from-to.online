@@ -1,6 +1,7 @@
-import UIkit from 'uikit';
-import Icons from 'uikit/dist/js/uikit-icons';
-
-// loads the Icon plugin
-UIkit.use(Icons);
+import $ from 'jquery';
+document.addEventListener('DOMContentLoaded', function() {
+    var navTopHeight = $('.nav-wrapper').height();
+    //$('.header-top').height(navTopHeight);
+    $('body').css('marginTop', navTopHeight);
+});
 

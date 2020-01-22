@@ -10,8 +10,9 @@
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
     "devDependencies": {
-        "axios": "^0.19",
+        "axios": "^0.19.2",
         "cross-env": "^5.1",
+        "ember-cli-materialize": "^0.22.0",
         "laravel-mix": "^5.0.1",
         "lodash": "^4.17.13",
         "resolve-url-loader": "^2.3.1",
@@ -20,6 +21,21 @@
         "vue-template-compiler": "^2.6.11"
     },
     "dependencies": {
-        "uikit": "^3.2.7"
+        "binance-api-node": "^0.9.12",
+        "bootstrap": "^4.4.1",
+        "bootstrap-icons": "^1.0.0-alpha2",
+        "child_process": "^1.0.2",
+        "dgram": "^1.0.1",
+        "dns": "^0.2.2",
+        "fs": "0.0.1-security",
+        "jquery": "^3.4.1",
+        "materialize-css": "^1.0.0-rc.2",
+        "moment": "^2.24.0",
+        "net": "^1.0.2",
+        "popper.js": "^1.16.0",
+        "tls": "0.0.1",
+        "vue": "^2.6.11",
+        "vue-material-design-icons": "^4.4.0",
+        "vuejs-dialog": "^1.4.1"
     }
 }
