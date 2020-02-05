@@ -7,7 +7,7 @@
         <title>From-To</title>
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="{{public_path('assets/css/app.css')}}" type="text/css">
+        <link rel="stylesheet" href="{{asset('assets/css/app.css')}}" type="text/css">
 
         <link href="https://fonts.googleapis.com/css?family=Poiret+One|Reenie+Beanie&display=swap" rel="stylesheet">
         <!-- Styles -->
@@ -38,6 +38,6 @@
         </div>
     @include('app.footer')
     </body>
-    <script src="{{public_path('assets/js/app.js')}}"></script>
-    <script src="{{public_path('assets/js/vue.js')}}"></script>
+    <script src="{{asset('assets/js/app.js')}}"></script>
+    <script src="{{asset('assets/js/vue.js')}}"></script>
 </html>
