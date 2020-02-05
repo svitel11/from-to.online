@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('datasize.index');
-});
+})->name('home');
 
 Route::get('/datasize', 'DatasizeController@index')->name('datasize');
 
