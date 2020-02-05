@@ -10,6 +10,8 @@
         <link rel="stylesheet" href="{{asset('public/assets/css/app.css')}}" type="text/css">
 
         <link href="https://fonts.googleapis.com/css?family=Poiret+One|Reenie+Beanie&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
         <!-- Styles -->
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
