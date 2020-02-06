@@ -28,6 +28,7 @@
         "dgram": "^1.0.1",
         "dns": "^0.2.2",
         "fs": "0.0.1-security",
+        "image-conversion": "^1.1.9",
         "jquery": "^3.4.1",
         "materialize-css": "^1.0.0-rc.2",
         "moment": "^2.24.0",

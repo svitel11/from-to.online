@@ -13,10 +13,12 @@ window.axios = axios;
 import Crypto from './components/Crypto';
 import Datesize from './components/Datesize';
 import Bot from './components/Bot';
+import Imageconverter from './components/Image';
 //Vue.use(CKEditor);
 Vue.component('crypto', Crypto);
 Vue.component('datesize', Datesize);
 Vue.component('bot', Bot);
+Vue.component('imageconverter', Imageconverter);
 new Vue({
     el: '#app'
 });

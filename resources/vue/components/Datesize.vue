@@ -1,6 +1,7 @@
 <template>
     <div>
         <h4 class="title">Data Size Calculator</h4>
+        <hr class="hr-title"/>
         <div class="row">
             <div class="input-field col s5">
                 <input id="from" @change="calculate" @keyup="calculate" type="text" class="validate" v-model="val">

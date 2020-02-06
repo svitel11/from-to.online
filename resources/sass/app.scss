@@ -8,6 +8,20 @@ body {
 
 }
 
+.title {
+    font-family: 'Poiret One', cursive;
+}
+
+.hr-title {
+    height: 0;
+    overflow: visible;
+    margin-bottom: 40px;
+    width: 30%;
+    margin-left: 0;
+    border-top: none;
+    border-bottom: 1px solid #ee6e73;
+}
+
 .container {
     box-shadow: 0px 0px 9px;
     min-height: calc(100vh - 72px - 64px + 10px);
