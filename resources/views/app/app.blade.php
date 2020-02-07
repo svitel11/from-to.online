@@ -1,47 +1,60 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="robots" content="index, follow">
-        <meta name="msvalidate.01" content="1B85E202125C114886139BD8CB4898CF" />
-        @yield('meta')
-        <title>@yield('title')</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="msvalidate.01" content="1B85E202125C114886139BD8CB4898CF"/>
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="{{asset('assets/css/app.css')}}" type="text/css">
+    <!--FACEBOOK META-->
+    <meta property="og:url" content="https://from-to.online"/>
+    <meta property="og:type" content="website"/>
 
-        <link href="https://fonts.googleapis.com/css?family=Poiret+One|Reenie+Beanie&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    @yield('meta')
+    <title>@yield('title')</title>
 
-        <!-- Styles -->
+    <!-- Fonts -->
+    <link rel="stylesheet" href="{{asset('assets/css/app.css')}}" type="text/css">
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156658061-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One|Reenie+Beanie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-            gtag('config', 'UA-156658061-1');
-        </script>
+    <!-- Styles -->
 
-    </head>
-    <body class="fixed-sn white-skin">
-        @include('app.nav-top')
-        <div class="container">
-            <!-- ADS TOP Bilboard-->
-            <div class="row">
-                <div class="col s12"></div>
-            </div>
-            <!-- Page Content goes here -->
-        <div class="row">
-            <div class="col s12 m7 l8 content">@yield('content')</div>
-            <div class="col s12 m5 l4 content-ad">@yield('aside')</div>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156658061-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-156658061-1');
+    </script>
+
+</head>
+<body class="fixed-sn white-skin">
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0&appId=1284995818368131"></script>
+@include('app.nav-top')
+<div class="container">
+    <!-- ADS TOP Bilboard-->
+    <div class="row">
+        <div class="col s12"></div>
+    </div>
+    <!-- Page Content goes here -->
+    <div class="row">
+        <div class="col s12 m7 l8 content">@yield('content')</div>
+        <div class="col s12 m5 l4 content-ad">
+            @yield('aside')
         </div>
-        </div>
-    @include('app.footer')
-    </body>
-    <script src="{{asset('assets/js/app.js')}}"></script>
-    <script src="{{asset('assets/js/vue.js')}}"></script>
+    </div>
+</div>
+@include('app.footer')
+</body>
+<script src="{{asset('assets/js/app.js')}}"></script>
+<script src="{{asset('assets/js/vue.js')}}"></script>
 </html>
