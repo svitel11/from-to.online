@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="robots" content="index, follow">
+        <meta name="msvalidate.01" content="1B85E202125C114886139BD8CB4898CF" />
         @yield('meta')
         <title>@yield('title')</title>
 
