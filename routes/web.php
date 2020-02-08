@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('datasize.index');
 })->name('home');
 
+Route::get('/privacy_policy', function() {
+    return view('info.policy');
+})->name('privacy_policy');
+
 Route::get('/datasize', 'DatasizeController@index')->name('datasize');
 
 Route::get('/imageconvert', 'ImageController@index')->name('imageconvert');

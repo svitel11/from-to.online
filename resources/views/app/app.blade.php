@@ -25,13 +25,10 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156658061-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
         function gtag() {
             dataLayer.push(arguments);
         }
-
         gtag('js', new Date());
-
         gtag('config', 'UA-156658061-1');
     </script>
 
@@ -53,6 +50,7 @@
         </div>
     </div>
 </div>
+@include('app.cookie')
 @include('app.footer')
 </body>
 <script src="{{asset('assets/js/app.js')}}"></script>

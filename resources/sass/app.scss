@@ -31,9 +31,41 @@ body {
 .ffooter {
     text-align: center;
     background: #655556 !important;
-    padding-top: 0 !important;
+    padding: 0 20px !important;
     .footer-copyright {
         justify-content: center !important;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+        color: #dfdcdc;
+    }
+}
+
+.cookie-consent {
+    .js-cookie-consent {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: rgba(101, 85, 86, 0.8);
+        height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 10px;
+        .cookie-consent__message {
+            color: #efefef;
+        }
+        button {
+            margin-left: 20px;
+            border: none;
+            height: 40px;
+            background: #009688;
+            border-radius: 3px;
+            color: #e4e4e4;
+            cursor: pointer;
+        }
     }
 }
 
