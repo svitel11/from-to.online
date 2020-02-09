@@ -10,15 +10,13 @@ import 'vue-material-design-icons/styles.css';
 import axios from 'axios'
 window.axios = axios;
 
-import Crypto from './components/Crypto';
 import Datesize from './components/Datesize';
-import Bot from './components/Bot';
 import Imageconverter from './components/Image';
-//Vue.use(CKEditor);
-Vue.component('crypto', Crypto);
+import Cryptomarketcap from './components/Cryptomarketcap';
 Vue.component('datesize', Datesize);
-Vue.component('bot', Bot);
 Vue.component('imageconverter', Imageconverter);
+Vue.component('cryptomarketcap', Cryptomarketcap);
+//Vue.use(CKEditor);
 new Vue({
     el: '#app'
 });

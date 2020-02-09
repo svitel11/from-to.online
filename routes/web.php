@@ -24,3 +24,5 @@ Route::get('/datasize', 'DatasizeController@index')->name('datasize');
 Route::get('/imageconvert', 'ImageController@index')->name('imageconvert');
 
 Route::get('/bot', 'BotController@index')->name('bot');
+
+Route::get('/cryptomarketcup', 'CryptoController@index')->name('cryptomarketcup');
