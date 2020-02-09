@@ -1,7 +1,7 @@
 @extends('app.app')
 @section('title', 'Crypto Market Cap & Converter')
 @section('meta')
-
+    <meta property="og:url" content="https://from-to.online/cryptomarketcap">
     <meta property="og:title"         content="Crypto Market Cap & Converter" />
     <meta property="og:description"   content="Here is the section where you can find out how much your coin or token is worth. You can convert all existing crypto currencies.
     btc to btc, btc to eth, btc to ltc, btc to bch, btc to bnb, btc to eos, btc to xrp, btc to xlm, btc to usd, btc to aed, btc to ars, btc to aud, btc to bdt, btc to bhd, btc to bmd, btc to brl, btc to cad, btc to chf, btc to clp, btc to cny, btc to czk, btc to dkk, btc to eur, btc to gbp, btc to hkd, btc to huf, btc to idr, btc to ils, btc to inr, btc to jpy, btc to krw, btc to kwd, btc to lkr, btc to mmk, btc to mxn, btc to myr, btc to nok, btc to nzd, btc to php, btc to pkr, btc to pln, btc to rub, btc to sar, btc to sek, btc to sgd, btc to thb, btc to try, btc to twd, btc to uah, btc to vef, btc to vnd, btc to zar, btc to xdr, btc to xag, btc to xau,

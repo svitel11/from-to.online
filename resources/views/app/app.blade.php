@@ -7,7 +7,6 @@
     <meta name="msvalidate.01" content="1B85E202125C114886139BD8CB4898CF"/>
 
     <!--FACEBOOK META-->
-    <meta property="og:url" content="https://from-to.online"/>
     <meta property="og:type" content="website"/>
 
     @yield('meta')
