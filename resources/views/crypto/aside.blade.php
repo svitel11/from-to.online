@@ -1,5 +1,5 @@
 @section('aside')
-    <div class="col fb-like" data-href="https://from-to.online/cryptomarketcup" data-width="" data-layout="button" data-action="like" data-size="large" data-share="true"></div>
+    <div class="col fb-like" data-href="https://from-to.online/cryptomarketcap" data-width="" data-layout="button" data-action="like" data-size="large" data-share="true"></div>
 
     <div class="col s12">
         <div class="card-panel teal">
