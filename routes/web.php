@@ -25,4 +25,4 @@ Route::get('/imageconvert', 'ImageController@index')->name('imageconvert');
 
 Route::get('/bot', 'BotController@index')->name('bot');
 
-Route::get('/cryptomarketcup', 'CryptoController@index')->name('cryptomarketcap');
+Route::get('/cryptomarketcap', 'CryptoController@index')->name('cryptomarketcap');
