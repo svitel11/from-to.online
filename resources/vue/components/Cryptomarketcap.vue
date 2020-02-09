@@ -18,10 +18,10 @@
                 <div class="col s12 l2 swap-form-icon">
                     <swap-horizontal-icon :width="25" :height="25"/>
                 </div>
-                <div class="input-field col s4 l2">
+                <div class="input-field col s6 l3">
                     <input id="to" v-model="to_val" disabled type="text" class="validate">
                 </div>
-                <div class="input-field col s8 l3">
+                <div class="input-field col s6 l2">
                     <input @keyup="setCoinTo" @click="coinFromListTo = supportedCoins"  id="to_coin" v-model="to_coin" type="text" class="validate"  placeholder="Coin or Currency Symbol">
                     <div v-if="coinFromListTo.length > 0" class="dropdown-search dropdown-show">
                         <a class="dropdown-search-item" v-for="c in coinFromListTo">
@@ -189,17 +189,16 @@
             },
 
             setTo: function(coin) {
-                this.to_coin = coin;
+                this.to_coin = coin.toLowerCase();
                 this.coinFromListTo = [];
                 this.getPriceForPair();
             },
 
             getPriceForPair: async function() {
-                console.log('calc');
                 if (this.from_val === "" || this.from_coin === "" || this.from_coin === null || this.to_coin === "" || this.to_coin === null) return;
                 //let params = {this.from_coin, this.to_coin};
                 let data = await CoinGeckoClient.simple.price({ids: this.from_coin, vs_currencies: this.to_coin});
-                this.to_val = data.data[this.from_coin][this.to_coin] * this.from_val;
+                this.to_val = this.formatNumber('', data.data[this.from_coin][this.to_coin] * this.from_val);
             },
 
             makeMeta: function() {
@@ -213,7 +212,7 @@
 
         mounted() {
             this.getCoinsList();
-            this.makeMeta();
+            //this.makeMeta();
         },
 
         created() {
