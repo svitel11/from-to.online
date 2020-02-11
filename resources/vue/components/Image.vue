@@ -44,17 +44,6 @@
                 </form>
             </div>
         </div>
-        <div class="row">
-            <div class="col s12">
-                <div class="card-panel teal">
-                <span class="white-text"><b>The Image Converter</b> can help you to change the extension of your image.
-                    Here you can change extensions like <b>JPEG, PNG, GIF</b>, etc. Other than that, you can reduce the image quality if you want an image that takes up less storage space.</span>
-                </div>
-            </div>
-            <div class="col s6">
-
-            </div>
-        </div>
     </div>
 </template>
 <script>

@@ -1,13 +1,13 @@
 <template>
-    <div style="overflow-x: scroll">
+    <div>
         <h4 class="title">Crypto Market Cap & Converter</h4>
         <hr class="hr-title"/>
         <div class="row">
             <div class="col s12 coin-convert-form">
-                <div class="input-field col s4 l2">
+                <div class="input-field col s12 l2">
                     <input id="from" @keyup="getPriceForPair" v-model="from_val" type="text" class="validate">
                 </div>
-                <div class="input-field col s8 l3">
+                <div class="input-field col s12 l5">
                     <input @keyup="setCoinFrom" id="from_coin" v-model="from_coin" type="text" class="validate"
                            placeholder="e.g.: BTC">
                     <div v-if="coinFromListFrom.length > 0" class="dropdown-search dropdown-show">
@@ -19,7 +19,7 @@
                 <div class="col s12 l2 swap-form-icon">
                     <swap-horizontal-icon :width="25" :height="25"/>
                 </div>
-                <div class="input-field col s12 l2">
+                <div class="input-field col s12 l3">
                     <input @keyup="setCoinTo" @click="coinFromListTo = supportedCoins" id="to_coin" v-model="to_coin"
                            type="text" class="validate" placeholder="e.g.: usd">
                     <div v-if="coinFromListTo.length > 0" class="dropdown-search dropdown-show">
@@ -28,37 +28,39 @@
                         </a>
                     </div>
                 </div>
-                <div class="input-field col s12 l3">
+                <div class="input-field col s12 m6 l4">
                     <input id="to" v-model="to_val" disabled type="text" class="validate">
                 </div>
             </div>
         </div>
         <hr>
-        <table class="table-coins" v-if="coins.length > 0">
-            <thead>
-            <tr>
-                <th>Rank</th>
-                <th>Name</th>
-                <th>Market Cap</th>
-                <th>Price</th>
-                <th>Volume</th>
-                <th>Circulating Supply</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr v-for="(coin, idx) in coins">
-                <td>{{idx + 1}}</td>
-                <td style="display: flex">
-                    <img :src="coin.image.small" :alt="coin.name" height="20px" style="margin-right: 5px">{{coin.name}}
-                </td>
-                <td>{{formatNumber('$', coin.market_data.market_cap.usd)}}</td>
-                <td>{{formatNumber('$', coin.market_data.current_price.usd)}}</td>
-                <td>{{formatNumber('$', coin.market_data.total_volume.usd)}}</td>
-                <!--<td>{{format({prefix: '$'})(coin.market_data.total_volume.usd))}}</td>-->
-                <td>{{formatNumber('', coin.market_data.total_supply)}}</td>
-            </tr>
-            </tbody>
-        </table>
+        <div class="table-coins" v-if="coins.length > 0">
+            <table class="table table-responsive">
+                <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Market Cap</th>
+                    <th>Price</th>
+                    <th>Volume</th>
+                    <th>Circulating Supply</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr v-for="(coin, idx) in coins">
+                    <td>{{idx + 1}}</td>
+                    <td style="display: flex">
+                        <img :src="coin.image.small" :alt="coin.name" height="20px" style="margin-right: 5px">{{coin.name}}
+                    </td>
+                    <td>{{formatNumber('$', coin.market_data.market_cap.usd)}}</td>
+                    <td>{{formatNumber('$', coin.market_data.current_price.usd)}}</td>
+                    <td>{{formatNumber('$', coin.market_data.total_volume.usd)}}</td>
+                    <!--<td>{{format({prefix: '$'})(coin.market_data.total_volume.usd))}}</td>-->
+                    <td>{{formatNumber('', coin.market_data.total_supply)}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
         <div class="progress" v-else>
             <div class="indeterminate"></div>
         </div>
@@ -170,7 +172,7 @@
                 this.coinFromListFrom = [];
                 const _this = this;
                 this.coinsList.map(function (c) {
-                    if (c.name.indexOf(_this.from_coin) !== -1 || c.symbol.indexOf(_this.from_coin) !== -1) {
+                    if (c.name.toLowerCase().indexOf(_this.from_coin.toLowerCase()) !== -1 || c.symbol.toLowerCase().indexOf(_this.from_coin.toLowerCase()) !== -1) {
                         _this.coinFromListFrom.push(c);
                     }
                 });
@@ -180,7 +182,7 @@
                 this.coinFromListTo = [];
                 const _this = this;
                 this.supportedCoins.map(function (c) {
-                    if (c.indexOf(_this.to_coin) !== -1) {
+                    if (c.toLowerCase().indexOf(_this.to_coin.toLowerCase()) !== -1) {
                         _this.coinFromListTo.push(c);
                     }
                 });
@@ -236,6 +238,9 @@
     #to {
         color: #272727;
         font-weight: bold;
+        text-align: center;
+        font-size: 30px;
+        background: #ffffff;
     }
 
     .swap-form-icon {
@@ -270,6 +275,7 @@
     .dropdown-item-text {
         color: #ed6e73;
         cursor: pointer;
+        border-bottom: 1px solid #e6e2e2;
     }
 
     .dropdown-item-text:hover {
@@ -279,7 +285,7 @@
 
     /* width */
     ::-webkit-scrollbar {
-        width: 10px;
+        width: 5px;
     }
 
     /* Track */

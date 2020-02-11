@@ -1,53 +1,39 @@
 <template>
     <div>
-        <h4 class="title">Data Size Calculator</h4>
+        <h4 class="title">Data Storage Converter</h4>
         <hr class="hr-title"/>
         <div class="row">
             <div class="input-field col s5">
                 <input id="from" @change="calculate" @keyup="calculate" type="text" class="validate" v-model="val">
+                <label>Value</label>
             </div>
             <div class="col s2 swap-form-icon">
                 <swap-horizontal-icon :width="25" :height="25"/>
             </div>
             <div class="input-field col s5">
                 <input id="to" type="text" disabled class="validate" v-model="res">
+                <label>Output</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s6">
                 <select v-model="fromType" @change="calculate">
-                    <option value="" disabled selected>Choose your option</option>
-                    <option :value="type" v-for="(type, idx) in types">{{type}}</option>
+                    <option :value=null disabled>From</option>
+                    <option v-for="(type, idx) in types" :key="idx" :value="type" >{{type}}</option>
                 </select>
                 <label>Data Type Select</label>
             </div>
             <div class="input-field col s6">
                 <select v-model="toType" @change="calculate">
-                    <option value="" disabled selected>Choose your option</option>
-                    <option v-for="(type, idx) in types">{{type}}</option>
+                    <option :value=null disabled>To</option>
+                    <option v-for="(type, idx) in types" :key="idx" :value="type" >{{type}}</option>
                 </select>
                 <label>Data Type Select</label>
             </div>
         </div>
         <div class="row">
-            <div class="col s12">
-                <div class="card-panel teal">
-                <span class="white-text"><b>Computer data</b> is information processed or stored by a computer.
-                    This information may be in the form of text documents, images, audio clips, software programs, or other types of data.
-                    Computer data may be processed by the computer's CPU and is stored in files and folders on the computer's hard disk.
-                    At its most rudimentary level, computer data is a bunch of ones and zeros, known as binary data.
-                    Because all computer data is in binary format, it can be created, processed, saved, and stored digitally.
-                    This allows data to be transferred from one computer to another using a network connection or various media devices.
-                    It also does not deteriorate over time or lose quality after being used multiple times.</span>
-                </div>
-            </div>
-            <div class="col s6">
-                <span>Data formats available for calculation: </span>
-                <a href="#" v-for="type in types" @click="setFromType(type)">
-                    <div class="chip">
-                        {{type + ' '}}
-                    </div>
-                </a>
+            <div class="col tags">
+                <a class="tag" href="#" v-for="link in html" @click="setFromTo(link.from, link.to)">{{link.from + ' to '+ link.to}}</a>
             </div>
         </div>
     </div>
@@ -248,7 +234,8 @@
                         'Petabit': 0.000003007554923179,
                         'Petabyte': 1
                     }
-                }
+                },
+                html: []
             }
         },
 
@@ -260,11 +247,26 @@
             calculate: function() {
                 if (this.fromType === null || this.toType === null) return;
                 this.res = this.val * this.sizes[this.fromType][this.toType]
+            },
+
+            setLinks: function() {
+                for (let i = 0; i < this.types.length; i++) {
+                    for (let x = i + 1; x < this.types.length; x++) {
+                        this.html.push({from: this.types[i], to: this.types[x]});
+                    }
+                }
+            },
+
+            setFromTo: function(f, t) {
+                this.fromType = f;
+                this.toType = t;
+                this.calculate();
             }
         },
 
         mounted() {
             M.AutoInit();
+            this.setLinks();
         }
     }
 </script>
@@ -278,5 +280,18 @@
 
     .title {
         font-family: 'Poiret One', cursive;
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .tag {
+        margin: 5px;
+        border: 1px solid #a8d4cc;
+        border-radius: 3px;
+        padding: 5px;
     }
 </style>
