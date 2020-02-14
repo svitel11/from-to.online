@@ -1,4 +1,4 @@
-@extends('app.app1')
+@extends('app.app')
 
 @section('content')
     @include('bot.content')

@@ -5,21 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
     <meta name="msvalidate.01" content="1B85E202125C114886139BD8CB4898CF"/>
-
     <!--FACEBOOK META-->
     <meta property="og:type" content="website"/>
-
     @yield('meta')
     <title>@yield('title')</title>
-
     <!-- Fonts -->
     <link rel="stylesheet" href="{{asset('assets/css/app.css')}}" type="text/css">
-
-    <link href="https://fonts.googleapis.com/css?family=Poiret+One|Reenie+Beanie&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    {{--<link href="https://fonts.googleapis.com/css?family=Poiret+One|Reenie+Beanie&display=swap" rel="stylesheet">--}}
+    {{--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">--}}
     <!-- Styles -->
-
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156658061-1"></script>
     <script>

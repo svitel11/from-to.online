@@ -12,17 +12,19 @@
 */
 
 Route::get('/', function () {
-    return view('datasize.index');
+    return view('home.index');
 })->name('home');
 
 Route::get('/privacy_policy', function() {
     return view('info.policy');
 })->name('privacy_policy');
 
-Route::get('/datasize', 'DatasizeController@index')->name('datasize');
+Route::get('/datastorageconverter', 'DatasizeController@index')->name('datastorage');
 
-Route::get('/imageconvert', 'ImageController@index')->name('imageconvert');
+Route::get('/imageconverter', 'ImageController@index')->name('image');
 
 Route::get('/bot', 'BotController@index')->name('bot');
+Route::get('/bot/test', 'BotController@test')->name('test');
+Route::get('/bot/balance', 'BotController@balance')->name('balance');
 
-Route::get('/cryptomarketcap', 'CryptoController@index')->name('cryptomarketcap');
+Route::get('/cryptoconverter', 'CryptoController@index')->name('crypto');

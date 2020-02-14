@@ -10,9 +10,11 @@ import 'vue-material-design-icons/styles.css';
 import axios from 'axios'
 window.axios = axios;
 
+//import Bot from './components/Bot';
 import Datesize from './components/Datesize';
 import Imageconverter from './components/Image';
 import Cryptomarketcap from './components/Cryptomarketcap';
+//Vue.component('bot', Bot);
 Vue.component('datesize', Datesize);
 Vue.component('imageconverter', Imageconverter);
 Vue.component('cryptomarketcap', Cryptomarketcap);

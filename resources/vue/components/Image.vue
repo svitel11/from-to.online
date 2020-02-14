@@ -1,6 +1,6 @@
 <template>
     <div class="image-content">
-        <h4 class="title">Image Converter</h4>
+        <h4 class="title">Image Converter & Compressor</h4>
         <hr class="hr-title"/>
         <div class="row">
             <div class="col s12">

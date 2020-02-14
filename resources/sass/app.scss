@@ -1,5 +1,6 @@
 @import '~materialize-css';
 
+@import 'fonts';
 @import 'nav';
 @import 'menu';
 @import 'content';
@@ -68,6 +69,11 @@ body {
             cursor: pointer;
         }
     }
+}
+
+.route {
+    display: flex;
+    align-items: center;
 }
 
 @media (max-width: 640px) {

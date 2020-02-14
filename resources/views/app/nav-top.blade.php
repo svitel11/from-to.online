@@ -1,7 +1,7 @@
 <ul id="menu">
-    <li class="menu-item"><a href="{{route('datasize')}}"><i class="material-icons">data_usage</i> Data Size Calculator</a></li>
-    <li class="menu-item"><a href="{{route('imageconvert')}}"><i class="material-icons">image</i> Image Converter</a></li>
-    <li class="menu-item"><a href="{{route('cryptomarketcap')}}"><i class="material-icons">monetization_on</i> Crypto Currency</a></li>
+    <li class="menu-item"><a href="{{route('datastorage')}}"><i class="material-icons">data_usage</i> Data Size Calculator</a></li>
+    <li class="menu-item"><a href="{{route('image')}}"><i class="material-icons">image</i> Image Converter</a></li>
+    <li class="menu-item"><a href="{{route('crypto')}}"><i class="material-icons">monetization_on</i> Crypto Currency</a></li>
     {{--<li class="menu-item"><a href="#"><i class="material-icons">euro_symbol</i> Currency Converter</a></li>--}}
 </ul>
 <nav>
