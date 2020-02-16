@@ -40,8 +40,8 @@
                 <tr>
                     <th>Rank</th>
                     <th>Name</th>
-                    <th>Market Cap</th>
                     <th>Price</th>
+                    <th>Market Cap</th>
                     <th>Volume</th>
                     <th>Circulating Supply</th>
                 </tr>
@@ -52,8 +52,8 @@
                     <td style="display: flex">
                         <img :src="coin.image.small" :alt="coin.name" height="20px" style="margin-right: 5px">{{coin.name}}
                     </td>
-                    <td>{{formatNumber('$', coin.market_data.market_cap.usd)}}</td>
                     <td>{{formatNumber('$', coin.market_data.current_price.usd)}}</td>
+                    <td>{{formatNumber('$', coin.market_data.market_cap.usd)}}</td>
                     <td>{{formatNumber('$', coin.market_data.total_volume.usd)}}</td>
                     <!--<td>{{format({prefix: '$'})(coin.market_data.total_volume.usd))}}</td>-->
                     <td>{{formatNumber('', coin.market_data.total_supply)}}</td>
