@@ -6,7 +6,7 @@
         <div class="row">
             <div class="card-panel teal">
                 <span class="white-text"><b>How to use Data Storage Converter</b><br>
-                    Select the unit to convert from in the input units list. Select the unit to convert to in the output units list.
+                    Select the unit to convert <b>from</b> in the input units list. Select the unit <b>to</b> convert to in the output units list.
                     Enter the value to convert from into the input box on the left. The conversion result will immediately appear in the output box.</span>
             </div>
         </div>

@@ -25,6 +25,7 @@
         "bootstrap-icons": "^1.0.0-alpha2",
         "child_process": "^1.0.2",
         "coingecko-api": "^1.0.10",
+        "convert-units": "^2.3.4",
         "format-number": "^3.0.0",
         "image-conversion": "^1.1.9",
         "jquery": "^3.4.1",

@@ -3,7 +3,7 @@
         <h4 class="title">Crypto Market Cap & Converter</h4>
         <hr class="hr-title"/>
         <div class="row">
-            <div class="col s12 coin-convert-form">
+            <div class="col s12 convert-form">
                 <div class="input-field col s12 l2">
                     <input id="from" @keyup="getPriceForPair" v-model="from_val" type="text" class="validate">
                 </div>
@@ -75,9 +75,7 @@
 
     export default {
         name: 'Cryptomarketcap',
-        components: {
-            SwapHorizontalIcon
-        },
+        components: { SwapHorizontalIcon },
         data() {
             return {
                 coins: [],
@@ -229,58 +227,6 @@
 <style scoped>
     .table-coins {
         overflow-x: scroll;
-    }
-
-    .coin-convert-form {
-        background: #ffebeb;
-    }
-
-    #to {
-        color: #272727;
-        font-weight: bold;
-        text-align: center;
-        font-size: 30px;
-        background: #ffffff;
-    }
-
-    .swap-form-icon {
-        display: flex;
-        justify-content: center;
-        align-items: self-end;
-        height: 54px;
-    }
-
-    .dropdown-search {
-        width: 100%;
-        position: absolute;
-        flex-direction: column;
-        z-index: 99;
-        background: #f8fafc;
-        padding: 10px;
-        border: 1px solid #e4e4e4;
-        border-radius: 5px;
-        max-height: 300px;
-        overflow-y: scroll;
-    }
-
-    .dropdown-search-item {
-        text-decoration: none;
-        background-color: transparent;
-    }
-
-    .dropdown-search-item:hover {
-        background: #edbac0;
-    }
-
-    .dropdown-item-text {
-        color: #ed6e73;
-        cursor: pointer;
-        border-bottom: 1px solid #e6e2e2;
-    }
-
-    .dropdown-item-text:hover {
-        color: #ed3839;
-        font-weight: bold;
     }
 
     /* width */

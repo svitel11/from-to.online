@@ -28,3 +28,5 @@ Route::get('/bot/test', 'BotController@test')->name('test');
 Route::get('/bot/balance', 'BotController@balance')->name('balance');
 
 Route::get('/cryptoconverter', 'CryptoController@index')->name('crypto');
+
+Route::get('/massconverter', 'MassController@index')->name('mass');

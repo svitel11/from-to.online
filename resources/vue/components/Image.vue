@@ -15,7 +15,7 @@
                         </div>
                     </div>
                     <div class="input-field col s12 m6 l6">
-                        <select v-model="imgtype" @change="resetCompressFilter">
+                        <select id="select" v-model="imgtype" @change="resetCompressFilter">
                             <option value="" disabled selected>Choose the extension you want to convert</option>
                             <option value="image/png">PNG</option>
                             <option value="image/jpeg">JPG</option>

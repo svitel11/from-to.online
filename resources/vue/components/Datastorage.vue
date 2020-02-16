@@ -3,32 +3,42 @@
         <h4 class="title">Data Storage Converter</h4>
         <hr class="hr-title"/>
         <div class="row">
-            <div class="input-field col s5">
+            <div class="input-field col s12 l2">
                 <input id="from" @change="calculate" @keyup="calculate" type="text" class="validate" v-model="val">
                 <label>Value</label>
             </div>
-            <div class="col s2 swap-form-icon">
+
+            <div class="input-field col s12 l4">
+                <div class="select-wrapper">
+                    <select id="select-converter" v-model="fromType" @change="calculate">
+                        <option class="select-option" :value=null disabled>From</option>
+                        <option v-for="(type, idx) in types"
+                                class="select-option"
+                                :key="idx"
+                                :value="type">{{type}}
+                        </option>
+                    </select>
+                </div>
+                <label>Data Type Select</label>
+            </div>
+            <div class="col s12 l2 swap-form-icon">
                 <swap-horizontal-icon :width="25" :height="25"/>
             </div>
-            <div class="input-field col s5">
+            <div class="input-field col s12 l4">
+                <div class="select-wrapper">
+                    <select id="select-converter" v-model="toType" @change="calculate">
+                        <option class="select-option" :value=null disabled>To</option>
+                        <option v-for="(type, idx) in types"
+                                class="select-option"
+                                :key="idx"
+                                :value="type">{{type}}</option>
+                    </select>
+                </div>
+                <label>Data Type Select</label>
+            </div>
+            <div class="input-field col s12">
                 <input id="to" type="text" disabled class="validate" v-model="res">
-                <label>Output</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s6">
-                <select v-model="fromType" @change="calculate">
-                    <option :value=null disabled>From</option>
-                    <option v-for="(type, idx) in types" :key="idx" :value="type" >{{type}}</option>
-                </select>
-                <label>Data Type Select</label>
-            </div>
-            <div class="input-field col s6">
-                <select v-model="toType" @change="calculate">
-                    <option :value=null disabled>To</option>
-                    <option v-for="(type, idx) in types" :key="idx" :value="type" >{{type}}</option>
-                </select>
-                <label>Data Type Select</label>
+                <label>Result</label>
             </div>
         </div>
         <div class="row">
@@ -40,8 +50,9 @@
 </template>
 <script>
     import SwapHorizontalIcon from 'vue-material-design-icons/SwapHorizontal.vue';
+
     export default {
-        name: 'Datesize',
+        name: 'Datastorage',
         components: {
             SwapHorizontalIcon
         },
@@ -240,16 +251,16 @@
         },
 
         methods: {
-            setFromType: function(type) {
+            setFromType: function (type) {
                 this.fromType = type;
             },
 
-            calculate: function() {
+            calculate: function () {
                 if (this.fromType === null || this.toType === null) return;
                 this.res = this.val * this.sizes[this.fromType][this.toType]
             },
 
-            setLinks: function() {
+            setLinks: function () {
                 for (let i = 0; i < this.types.length; i++) {
                     for (let x = i + 1; x < this.types.length; x++) {
                         this.html.push({from: this.types[i], to: this.types[x]});
@@ -257,7 +268,7 @@
                 }
             },
 
-            setFromTo: function(f, t) {
+            setFromTo: function (f, t) {
                 this.fromType = f;
                 this.toType = t;
                 this.calculate();
@@ -265,7 +276,6 @@
         },
 
         mounted() {
-            M.AutoInit();
             this.setLinks();
         }
     }

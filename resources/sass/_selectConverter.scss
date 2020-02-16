@@ -1,0 +1,64 @@
+#select-converter {
+    all: initial;
+
+    border-bottom: 1px solid #9e9e9e;
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    cursor: pointer;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    margin-bottom: 8px;
+
+    .select-option {
+        display: block;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+        color: #26a69a;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 14px 16px !important;
+        min-height: 1.2em;
+    }
+
+    .select-option:hover, .select-option:active {
+        cursor: pointer;
+        border: none;
+        background: #00b0ff;
+    }
+
+    label {
+        position: absolute;
+        top: -26px;
+        font-size: 0.8rem;
+        color: #9e9e9e;
+        cursor: text;
+        -webkit-transition: color 0.2s ease-out, -webkit-transform 0.2s ease-out;
+        transition: color 0.2s ease-out, -webkit-transform 0.2s ease-out;
+        transition: transform 0.2s ease-out, color 0.2s ease-out;
+        transition: transform 0.2s ease-out, color 0.2s ease-out, -webkit-transform 0.2s ease-out;
+        -webkit-transform-origin: 0% 100%;
+        transform-origin: 0% 100%;
+        text-align: initial;
+        -webkit-transform: translateY(12px);
+        transform: translateY(12px);
+    }
+
+}
+
+/*position: relative;
+cursor: pointer;
+background-color: transparent;
+border: none;
+border-bottom: 1px solid #9e9e9e;
+outline: none;
+height: 3rem;
+line-height: 3rem;
+width: 100%;
+          font-size: 16px;
+margin: 0 0 8px 0;
+padding: 0;
+display: block;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+z-index: 1;*/

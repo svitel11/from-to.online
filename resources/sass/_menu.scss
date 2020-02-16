@@ -1,11 +1,11 @@
 $menu-color: #615253;
-$menu-color-hover: #3428ff;
-$menu-bkg-color: #f7f4f4;
+$menu-color-hover: #ff9100;
+$menu-bkg-color: #564a4a;
 
 #menu {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     position: fixed;
     right: -600px;
     padding: 20px;
@@ -16,11 +16,15 @@ $menu-bkg-color: #f7f4f4;
     box-shadow: 0px 1px 5px;
     z-index: 99;
 
+    .menu-item {
+        margin: 10px;
+    }
+
     .menu-item > a {
         display: flex;
         flex-direction: column;
         align-items: center;
-        color: $menu-color-hover;
+        color: #ffab40;
     }
 
     .menu-item > a:hover {
