@@ -1,2 +1,3 @@
+Sitemap: https://from-to.online/sitemap.xml
 User-agent: *
 Disallow:
