@@ -12,9 +12,7 @@
     <title>@yield('title')</title>
     <!-- Fonts -->
     <link rel="stylesheet" href="{{asset('assets/css/app.css')}}" type="text/css">
-{{--<link href="https://fonts.googleapis.com/css?family=Poiret+One|Reenie+Beanie&display=swap" rel="stylesheet">--}}
-{{--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">--}}
-<!-- Styles -->
+    <!-- Styles -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156658061-1"></script>
     <script>
