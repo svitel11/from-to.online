@@ -16,7 +16,7 @@ The crypto toll also has other things to offer, such as the current value of cry
 <img src="https://from-to.online/assets/images/readme/d1.png">
 
 <div style="display: flex; justify-content: space-around; margin: 20px auto">
-    <img src="https://from-to.online/assets/images/readme/m1.png">
-    <img src="https://from-to.online/assets/images/readme/m2.png">
+    <img width="300" src="https://from-to.online/assets/images/readme/m1.png">
+    <img width="300" src="https://from-to.online/assets/images/readme/m2.png">
 </div>
 
