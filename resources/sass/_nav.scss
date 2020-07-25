@@ -2,4 +2,10 @@ $nav-color: #635354;
 
 nav {
     background: $nav-color !important;
+
+    .nav-wrapper {
+        .right {
+            margin-right: 10px
+        }
+    }
 }

@@ -7,9 +7,9 @@
 </ul>
 <nav>
     <div class="nav-wrapper">
-        <a href="{{route('home')}}" class="brand-logo" style="margin-left: 10px">from-to</a>
+        <a style="height: 100%" href="{{route('home')}}" class="brand-logo" style="margin-left: 10px"><img style="height: 100%" src="{{asset('assets/images/logo.png')}}" alt="logo"></a>
         <ul class="right">
-            <li class="menu-view"><a href="#"><i class="material-icons">view_module</i></a></li>
+            Menu <li class="menu-view"><a href="#"><i class="material-icons">view_module</i></a></li>
         </ul>
     </div>
 </nav>

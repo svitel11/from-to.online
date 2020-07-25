@@ -33,10 +33,10 @@
                         </p>
                     </div>
                     <div class="col s12">
-                        <a v-if="compress_file === null" class="waves-effect waves-light btn-small"
-                           @click="compressImg"><i class="material-icons left">sync</i>Convert</a>
-                        <a v-else class="waves-effect waves-light btn-small" @click="download"><i
-                            class="material-icons left">file_download</i>Download</a>
+                        <!--<a v-if="compress_file === null" class="waves-effect waves-light btn-small"
+                           @click="compressImg"><i class="material-icons left">sync</i>Convert</a>-->
+                        <a class="waves-effect waves-light btn-small" @click="compressImg"><i
+                            class="material-icons left">file_download</i>Convert & Download</a>
                         <div class="progress" v-if="download_load">
                             <div class="indeterminate"></div>
                         </div>
@@ -80,6 +80,7 @@
                 const f = await imageConversion.canvastoFile(canvas, Number(this.compress) / 100, this.imgtype);
                 this.download_load = false;
                 this.compress_file = f;
+                this.download();
             },
 
             download: function () {
